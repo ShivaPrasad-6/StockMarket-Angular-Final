@@ -1,0 +1,45 @@
+
+  
+      <table class="table table-hover table-sm"  >
+  
+        <thead class="thead-light">
+  
+          <tr>
+  
+            <th>UserName</th>
+  
+            <th>Email</th>
+  
+            <th>Phone</th>
+  
+            <th>Usertype</th>
+            
+            <th>Confirm</th>
+            
+  
+          </tr>
+  
+        </thead>
+  
+        <tbody>
+  
+           <tr *ngFor="let user of userList ">
+  
+            <td>{{user.username}}</td>
+  
+            <td>{{user.email}}</td>
+  
+            <td>{{user.phone}}</td>
+  
+            <td>{{user.usertype}}</td>
+
+            <td>{{user.confirm}}</td>
+  
+           </tr>
+  
+        </tbody><br>
+  
+      </table>
+  
+  
+  

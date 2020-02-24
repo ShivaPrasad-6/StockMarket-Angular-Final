@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class="bg">
+    <button type="button" class="btn btn-outline-info "><a routerLink="/add">Add</a></button>
+    <button type="button" class="btn btn-outline-info ">Edit</button>
+    <button type="button" class="btn btn-outline-info ">Remove</button>
+
+    <div class="modal-footer" >  
+      <button type="submit" class="btn btn-success" [hidden]="isupdated">Update</button>  
+      <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="changeisUpdate()">Close</button>  
+    </div> 
+    
+<div class="container">
+ <h2>Company-Details</h2>
+ 
+  
+ <table class="table table-hover table-sm"  >
+  
+    <thead class="thead-light">
+
+      <tr>
+
+        <th>CompanyName</th>
+
+        <th>TurnOver</th>
+
+        <th>CEO Name</th>
+
+        <th>Board of Directors</th>
+        
+        <th>Listed in StockExchange</th>
+
+        <th>Sector</th>
+        <th>Remarks</th>
+        <th>Stock Code</th>
+        
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+       <tr *ngFor="let Ac2 of companyList ">
+
+        <td>{{Ac2.companyname}}</td>
+
+        <td>{{Ac2.turnover}}</td>
+
+        <td>{{Ac2.ceoname}}</td>
+
+        <td>{{Ac2.bod}}</td>
+
+        <td>{{Ac2.listedinse}}</td>
+
+        <td>{{Ac2.sector}}</td>
+        
+        <td>{{Ac2.remarks}}</td>
+        
+        <td>{{Ac2.stockcode}}</td>
+
+       </tr>
+
+    </tbody><br>
+
+  </table>
+
+
+
+
+</div>
+<button type="button" class="btn btn-outline-primary "><a href='admin-portal'>Back</a></button>
+</div>
+</html>

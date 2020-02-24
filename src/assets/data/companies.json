@@ -1,0 +1,20 @@
+[
+    {
+        "CompanyName": "Cognizant",
+        "CEOName": "Brian Hampiers",
+        "Turnover": "10Billion",
+        "IPO Date": "12/12/2035"
+    },
+    {
+        "CompanyName": "TCS",
+        "CEOName": "Rajesh Gopinathan",
+        "Turnover": "15Billion",
+        "IPO Date": "12/12/2025"
+    },
+    {
+        "CompanyName": "Wipro",
+        "CEOName": "Abidali Neemuchwala",
+        "Turnover": "20Billion",
+        "IPO Date": "12/12/2020"
+    }
+]
