@@ -1,0 +1,8 @@
+.navbar-nav li a{
+    font-size: 18px;
+}
+.navbar{
+position:relative;
+ min-height: 50px;
+ margin-bottom: 0px !important;
+}

@@ -2,7 +2,8 @@ export class User {
     username:String;  
     password:String;
     email:String;  
-    mobile:number;
+    phone:number;
     confirm:String;
     usertype:String;  
+    profileimage :String; 
 }

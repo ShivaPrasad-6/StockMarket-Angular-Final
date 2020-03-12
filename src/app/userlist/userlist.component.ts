@@ -9,6 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import { Observable } from 'rxjs/internal/Observable';
 
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,9 +25,10 @@ import { Observable } from 'rxjs/internal/Observable';
 export class UserListComponent implements OnInit {
   
   isupdated: boolean;
+  
 
 
-  constructor(private userservice: UserserviceService) { }
+  constructor(private router: Router,private userservice: UserserviceService) { }
 
 
   userList: Observable<User[]>;
@@ -39,4 +41,23 @@ export class UserListComponent implements OnInit {
  
    });
   }
+
+  deleteUser(user : User ) {  
+    this.userservice.deleteUser(user.username)  
+      .subscribe(  
+        data => {  
+          this.userservice.getAllUsers().subscribe(data =>{  
+            this.userList =data;   
+            });
+        }) ;
+  };
+
+  updateUser(user : User ) {  
+    
+    window.localStorage.removeItem("edit-username");
+    window.localStorage.setItem("edit-username", user.username.toString());
+    this.router.navigate(['signup']);
+    };
+
+
 }

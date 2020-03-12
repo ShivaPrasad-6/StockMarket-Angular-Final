@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './LoC/home/home.component';
 import { LoginComponent } from './LoC/login/login.component';
-import { AdminloginComponent } from './LoC/adminlogin/adminlogin.component';
 import { SignupComponent } from './Loc/signup/signup.component';
 import { AdminportalComponent } from './LoC/adminportal/adminportal.component';
 import { NavbarComponent } from './Loc/navbar/navbar.component';
@@ -22,7 +21,16 @@ import {HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserListComponent } from './userlist/userlist.component';
 import {DataTablesModule} from 'angular-datatables';
-import { UpdatecompanyComponent } from './updatecompany/updatecompany.component';
+import { UpdatecompanyComponent } from './LoC/ac2/updatecompany/updatecompany.component';
+import { AddmanageexchangeComponent } from './LoC/ac3/addmanageexchange/addmanageexchange.component';
+import { AddipodetailsComponent } from './LoC/ac4/addipodetails/addipodetails.component';
+import { Ac5Component } from './LoC/ac5/ac5.component';
+import { AddsectorsComponent } from './LoC/ac5/addsectors/addsectors.component';
+import { Ac6Component } from './LoC/ac6/ac6.component';
+import { AddstockpriceComponent } from './LoC/ac6/addstockprice/addstockprice.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+
+import { HighchartsService } from 'src/app/HighchartsService.service';
 
 
 @NgModule({
@@ -30,7 +38,6 @@ import { UpdatecompanyComponent } from './updatecompany/updatecompany.component'
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AdminloginComponent,
     SignupComponent,
     AdminportalComponent,
     NavbarComponent,
@@ -46,7 +53,12 @@ import { UpdatecompanyComponent } from './updatecompany/updatecompany.component'
     AddcompanyComponent,
     UserListComponent,
     UpdatecompanyComponent,
-    
+    AddmanageexchangeComponent,
+    AddipodetailsComponent,
+    Ac5Component,
+    AddsectorsComponent,
+    Ac6Component,
+    AddstockpriceComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,9 +66,10 @@ import { UpdatecompanyComponent } from './updatecompany/updatecompany.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    DataTablesModule
+    DataTablesModule,
+    HighchartsChartModule
   ],
-  providers: [],
+  providers: [HighchartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

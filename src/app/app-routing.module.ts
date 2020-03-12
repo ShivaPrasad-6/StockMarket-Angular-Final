@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './LoC/home/home.component';
 import { LoginComponent } from './LoC/login/login.component';
-import { AdminloginComponent } from './LoC/adminlogin/adminlogin.component';
 import { SignupComponent } from './Loc/signup/signup.component';
 import { AdminportalComponent } from './LoC/adminportal/adminportal.component';
 import { NavbarComponent } from './Loc/navbar/navbar.component';
@@ -17,27 +16,43 @@ import { Uc4Component } from './LoC/uc4/uc4.component';
 import { UserportalComponent } from './LoC/userportal/userportal.component';
 import { AddcompanyComponent } from './LoC/ac2/addcompany/addcompany.component';
 import { UserListComponent } from './userlist/userlist.component';
+import { UpdatecompanyComponent } from './LoC/ac2/updatecompany/updatecompany.component';
+import { AddmanageexchangeComponent } from './LoC/ac3/addmanageexchange/addmanageexchange.component';
+import { Ac5Component } from './LoC/ac5/ac5.component';
+import { Ac6Component } from './LoC/ac6/ac6.component';
+import { AddipodetailsComponent } from './LoC/ac4/addipodetails/addipodetails.component';
+import { AddsectorsComponent } from './LoC/ac5/addsectors/addsectors.component';
+import { AddstockpriceComponent } from './LoC/ac6/addstockprice/addstockprice.component';
 
 
 const routes: Routes = [
+  
   {path:"navbar",component:NavbarComponent},
   {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent},
   {path:"login",component:LoginComponent},
-  {path:"admin",component:AdminloginComponent},
   {path:"signup",component:SignupComponent},
   {path:"admin-portal",component:AdminportalComponent},
   {path:"ac1",component:Ac1Component},  
   {path:"add",component:AddcompanyComponent},  
   {path:"ac2",component:Ac2Component},
-  {path:"ac3",component:Ac3Component},  
+  {path:"update-company",component:UpdatecompanyComponent},
+  {path:"ac3",component:Ac3Component},
+  {path:"addmanageexchange",component:AddmanageexchangeComponent},  
   {path:"ac4",component:Ac4Component},
+  {path:"addipodetails",component:AddipodetailsComponent},  
+  {path:"ac5",component:Ac5Component},
+  {path:"addsectors",component:AddsectorsComponent},
+  {path:"ac6",component:Ac6Component},
+  {path:"addstockprice",component:AddstockpriceComponent},
   {path:"user-portal",component:UserportalComponent},
   {path:"uc1",component:Uc1Component},  
   {path:"uc2",component:Uc2Component},
   {path:"uc3",component:Uc3Component},  
   {path:"uc4",component:Uc4Component},
-  {path:"userlist",component:UserListComponent}
+  {path:"userlist",component:UserListComponent},
+  {path:"comparecompany",component:Uc2Component},
+  
 ];
 
 @NgModule({

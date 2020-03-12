@@ -1,3 +1,81 @@
-<div class="bg"><p>ac3 works!</p>
-<button type="button" class="btn btn-outline-primary "><a href='admin-portal'>Back</a></button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+.bg {
+
+
+
+background-image: url("https://images.pexels.com/photos/160389/pexels-photo-160389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+
+background-repeat: no-repeat;
+
+background-size:  cover;
+
+}
+
+</style>
+<div class="bg">
+    <button type="button" class="btn btn-info "><a routerLink="/addmanageexchange">Add</a></button>
+    
+<div class="container">
+ <h2>Stock Exchange Details</h2>
+ 
+  
+ <table class="table table-hover table-sm"  >
+  
+    <thead class="thead-light">
+
+      <tr>
+
+        <th>Seid</th>
+
+        <th>Stockexchange</th>
+
+        <th>Brief</th>
+
+        <th>Remarks</th>
+        
+        <th>Contactaddress </th>
+      
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+       <tr *ngFor="let stock of stockexchangeList ">
+
+        <td>{{stock.seid}}</td>
+
+        <td>{{stock.stockexchange}}</td>
+
+        <td>{{stock.brief}}</td>
+        
+        <td>{{stock.remarks}}</td>
+        
+        <td>{{stock.contactaddress}}</td>
+        
+        <td><button (click)="deleteStockExchange(stock)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button>   &nbsp;
+          <button (click)="updateStockExchange(stock)" class='btn btn-info'  
+          data-toggle="modal" data-target="#myModal">Update</button>  
+        </td>
+
+       </tr>
+
+    </tbody><br>
+
+  </table>
+
 </div>
+<button type="button" class="btn btn-outline-primary "><a routerLink="/admin-portal">Back</a></button>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+</html>

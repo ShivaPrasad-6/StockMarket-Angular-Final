@@ -1,0 +1,10 @@
+body{
+    background-image: url("https://images.pexels.com/photos/221174/pexels-photo-221174.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    height: 590px;
+    width: 1350px;
+    background-size: cover;
+}
+
+*{
+    color: white;
+}

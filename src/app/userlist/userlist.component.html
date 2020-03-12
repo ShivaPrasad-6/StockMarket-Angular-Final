@@ -1,45 +1,57 @@
+<body>
+  <div class="row">
+    <div class="col-lg-2 col-md-5 col-sm-6 "></div>
+    <div class="col-lg-8 col-md-5 col-sm-6">
+      <br><br>
+      <table class="table table-hover table-sm">
 
-  
-      <table class="table table-hover table-sm"  >
-  
         <thead class="thead-light">
-  
+
           <tr>
-  
+
             <th>UserName</th>
-  
+
             <th>Email</th>
-  
+
             <th>Phone</th>
-  
+
             <th>Usertype</th>
-            
+
             <th>Confirm</th>
-            
-  
+            <th>File</th>
+
+
           </tr>
-  
+
         </thead>
-  
+
         <tbody>
-  
-           <tr *ngFor="let user of userList ">
-  
+
+          <tr *ngFor="let user of userList ">
+
             <td>{{user.username}}</td>
-  
+
             <td>{{user.email}}</td>
-  
+
             <td>{{user.phone}}</td>
-  
+
             <td>{{user.usertype}}</td>
 
             <td>{{user.confirm}}</td>
-  
-           </tr>
-  
+            <td>{{user.profileimage}}</td>
+
+            <td><button (click)="deleteUser(user)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button>
+              &nbsp;
+              <button (click)="updateUser(user)" class='btn btn-info' data-toggle="modal"
+                data-target="#myModal">Update</button>
+            </td>
+
+          </tr>
+
         </tbody><br>
-  
+
       </table>
-  
-  
-  
+    </div>
+    <div class="col-lg-2"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+  </div>
+</body>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+<title>UpdateCompany</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+ body {
+
+    color: #fff;
+
+    background-image: url("https://images.pexels.com/photos/188035/pexels-photo-188035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+
+    background-repeat: no-repeat;
+
+ background-size: 1400 px 700px;
+
+
+
+ }
+
+ .form-control, .form-control:focus, .input-group-addon {
+
+ border-color: #e1e1e1;
+
+ }
+
+  .form-control, .btn {
+
+    border-radius: 3px;
+
+  }
+
+  
+
+</style>
+
+</head>
+
+<body> 
+
+<div class="container" align="center" >
+
+ <div [hidden]="submitted" style="width: 400px;">
+
+ <form [formGroup]="companyupdateform" #updateCompany1 (ngSubmit)="updateCompany(updateCompany1)">
+
+ <h2>Update Company</h2>
+
+  <div class="form-group">
+
+  <div class="input-group">
+
+  <input type="text" class="form-control" formControlName="companyname" placeholder="Companyname" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Companyname.touched) && (Companyname.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Companyname.errors.required">CompanyName is Required</span>
+
+        </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+  <input type="number" class="form-control" formControlName="turnover" placeholder="Turnover" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Turnover.touched) && (Turnover.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Turnover.errors.required">Turnover is Required</span>
+
+        </div>
+
+  </div>
+
+ </div>
+
+    <div class="form-group">
+
+  <div class="input-group">
+
+  <input type="text" class="form-control" formControlName="ceoname" placeholder="Ceoname" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Ceoname.touched) && (Ceoname.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Ceoname.errors.required">User Email is Required</span>
+
+        </div>
+
+  </div>
+
+    </div>
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+
+  <input type="text" class="form-control" formControlName="bod" placeholder="Bod" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Bod.touched)&& (Bod.invalid) "
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Bod.errors.required">Phone is Required</span>
+
+   </div>
+
+  </div>
+
+    </div>
+
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+
+  <input type="number" class="form-control" formControlName="listedinse" placeholder="listedinse" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Listedinse.touched)&&(Listedinse.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Listedinse.errors.required">listedinse is Required</span>
+
+  </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+
+  <input type="text" class="form-control" formControlName="sector" placeholder=" sector" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Sector.touched)&&(Sector.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Sector.errors.required">Address is Required</span>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  <div class="form-group">
+
+  <div class="input-group">
+
+  
+
+  <input type="text" class="form-control" formControlName="remarks" placeholder="remarks" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Remarks.touched)&&(Remarks.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Remarks.errors.required">Remarks is Required</span>
+
+  </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+
+  <input type="number" class="form-control" formControlName="stockcode" placeholder="stockcode" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Stockcode.touched)&&(Stockcode.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Stockcode.errors.required">stockcode is Required</span>
+
+  </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <button type="submit" class="btn btn-primary btn-lg">Update</button>
+
+
+
+ </div>
+
+
+
+  </form>
+
+</div>
+
+</div>
+
+<div [hidden]="!submitted">
+
+<h5>Updated Successfully</h5>
+ <button (click)="companyupdateform()" ></button>
+ <button type="button" class="btn btn-outline-primary "><a routerLink="/ac2">Back</a></button>
+
+ </div>
+<br><br><br><br><br><br><br>
+</body>
+
+</html>               

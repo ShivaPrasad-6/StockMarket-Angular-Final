@@ -53,25 +53,8 @@ export class AddcompanyComponent implements OnInit {
     this.company = new Ac2();
   }
 
-  updateCompany(updateCompany) {
-
-    this.company = new Ac2();
-    this.company.companyname = this.Companyname.value;
-    this.company.turnover = this.Turnover.value
-    this.company.ceoname = this.Ceoname.value;
-    this.company.bod = this.Bod.value;
-    this.company.listedinse = this.Listedinse.value;
-    this.company.sector = this.Sector.value;
-    this.company.remarks = this.Remarks.value;
-    this.company.stockcode = this.Stockcode.value;
-    this.submitted = true;
-    this.update();
-  }
-  update() {
-    this.companyservice.updateCompany(this.company)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.company = new Ac2();
-  }
+ 
+ 
   
   get Companyname() {
     return this.companysaveform.get('companyname');
@@ -101,8 +84,5 @@ export class AddcompanyComponent implements OnInit {
     this.submitted = false;
     this.companysaveform.reset();
   }
-  updateCompanyForm() {
-    this.submitted = false;
-    this.companysaveform.reset();
-  }
+ 
 }

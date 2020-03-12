@@ -1,7 +1,10 @@
 .bg{
-    background-image: url("https://content.fortune.com/wp-content/uploads/2019/08/GettyImages-660952912.jpg");
+    background-image: url(src/app/LoC/images/typingphone.jpg);
  height:570px;
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+  }
+  *{
+      color:black;
   }

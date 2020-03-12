@@ -1,4 +1,94 @@
-<div class="bg">
-<p>ac4 works!</p>
-<button type="button" class="btn btn-outline-info "><a href='admin-portal'>Back</a></button>
+<div class="bg" >
+<br>
+<button type="button" class="btn btn-outline-info "><a routerLink="/addipodetails">Add IPOS</a></button>
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<table class="table table-hover table-sm">
+
+  <thead>
+
+
+
+    <tr>
+
+
+
+      <th>Ipoid</th>
+
+
+
+      <th>Companyname</th>
+
+
+
+      <th>Stockexchange</th>
+
+
+
+      <th>Pricepershare</th>
+
+
+
+      <th>Totalnoofshares</th>
+
+
+
+      <th>Opendatetime</th>
+
+
+
+
+
+    </tr>
+
+
+
+  </thead>
+
+
+
+  <tbody>
+
+
+
+    <tr *ngFor="let ac4 of ipodetailsList ">
+
+
+
+      <td>{{ac4.ipoid}}</td>
+
+
+
+      <td>{{ac4.companyname}}</td>
+
+
+
+      <td>{{ac4.stockexchange}}</td>
+
+
+
+      <td>{{ac4.pricepershare}}</td>
+
+
+
+      <td>{{ac4.totalnoofshares}}</td>
+
+
+
+      <td>{{ac4.opendatetime}}</td>
+
+
+
+      <td><button (click)="deleteIpoDetails(ac4)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button>
+        &nbsp;
+        <button (click)="updateIpoDetails(ac4)" class='btn btn-info' data-toggle="modal"
+          data-target="#myModal">Update</button>
+      </td>
+    </tr>
+  </tbody><br>
+</table>
+</div>
+</div>
+  <button type="button" class="btn btn-outline-info "><a routerLink="/admin-portal">Back</a></button>
 </div>

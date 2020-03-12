@@ -1,0 +1,9 @@
+body{
+    background-image: url(../images/lapystock.jpg);
+    height: 620px;
+    width: 1380px;
+    background-size: cover;
+}
+*{
+    color: white;
+}
