@@ -50,7 +50,10 @@ export class UpdatecompanyComponent implements OnInit {
     stockcode: new FormControl('', [Validators.required])
   });
   updateCompany(updateCompany) {
-
+    if(this.companyupdateform.invalid){
+      alert("Invalid Form");
+    }
+    else{
     this.company = new Ac2();
     this.company.companyname = this.Companyname.value;
     this.company.turnover = this.Turnover.value
@@ -62,6 +65,7 @@ export class UpdatecompanyComponent implements OnInit {
     this.company.stockcode = this.Stockcode.value;
     this.submitted = true;
     this.update();
+  }
   }
   update() {
     this.companyservice.updateCompany(this.company,this.company.companyname)

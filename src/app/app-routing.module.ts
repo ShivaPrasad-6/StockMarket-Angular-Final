@@ -23,6 +23,7 @@ import { Ac6Component } from './LoC/ac6/ac6.component';
 import { AddipodetailsComponent } from './LoC/ac4/addipodetails/addipodetails.component';
 import { AddsectorsComponent } from './LoC/ac5/addsectors/addsectors.component';
 import { AddstockpriceComponent } from './LoC/ac6/addstockprice/addstockprice.component';
+import { LogoutComponent } from './LoC/logout/logout.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent},
   {path:"login",component:LoginComponent},
+  {path:"logout",component:LogoutComponent},
   {path:"signup",component:SignupComponent},
   {path:"admin-portal",component:AdminportalComponent},
   {path:"ac1",component:Ac1Component},  

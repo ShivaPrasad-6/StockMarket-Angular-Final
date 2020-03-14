@@ -34,7 +34,10 @@ export class AddcompanyComponent implements OnInit {
     stockcode: new FormControl('', [Validators.required])
   });
   saveCompany(saveCompany) {
-
+    if(this.companysaveform.invalid){
+      alert("Invalid Form");
+    }
+    else{
     this.company = new Ac2();
     this.company.companyname = this.Companyname.value;
     this.company.turnover = this.Turnover.value
@@ -46,6 +49,7 @@ export class AddcompanyComponent implements OnInit {
     this.company.stockcode = this.Stockcode.value;
     this.submitted = true;
     this.save();
+    }
   }
   save() {
     this.companyservice.saveCompany(this.company)

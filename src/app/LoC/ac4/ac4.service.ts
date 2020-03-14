@@ -42,6 +42,17 @@ export class Ac4Service {
 
   }
 
+  uploadFile( file: File) : Observable<any>  
+   {  
+     let url = this.baseUrl + "uploadFile/" ;  
+   
+     const formdata: FormData = new FormData();  
+     
+     formdata.append('file', file);  
+    
+     return this.http.post(url , formdata);  
+   }  
+
 }
 
 

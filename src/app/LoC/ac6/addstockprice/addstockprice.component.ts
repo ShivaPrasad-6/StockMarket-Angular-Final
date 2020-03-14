@@ -44,7 +44,10 @@ export class AddstockpriceComponent implements OnInit {
   });
 
   saveStockPrice(saveStockPrice){
-
+  if(this.stockpricesaveform.invalid){
+    alert("Invalid Form");
+  }
+  else{
   this.stockprice=new Ac6();
   this.stockprice.companyname=this.Companyname.value;
   this.stockprice.stockexchange=this.Stockexchange.value;
@@ -53,6 +56,7 @@ export class AddstockpriceComponent implements OnInit {
   this.stockprice.time=this.Time.value;
   this.submitted = true;
   this.save();
+  }
   }
 
   save() {

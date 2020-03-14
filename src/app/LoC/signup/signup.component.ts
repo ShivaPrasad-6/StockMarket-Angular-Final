@@ -117,7 +117,6 @@ export class SignupComponent implements OnInit {
   return this.usersaveform.get('usertype');
  }
  get Profileimage(){
-
    return this.usersaveform.get('profileimage');
  }
 

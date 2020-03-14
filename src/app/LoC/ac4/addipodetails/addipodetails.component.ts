@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Ac4Service } from 'src/app/LoC/ac4/ac4.service';
-
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
 import { Ac4 } from 'src/app/LoC/ac4/ac4';
 import { Router } from '@angular/router';
 @Component({
@@ -39,65 +36,34 @@ export class AddipodetailsComponent implements OnInit {
 
   });
 
-
-
-
-
-
-
   saveIpoDetails(saveIpoDetails) {
-
-
-
+    if(this.ipodetailssaveform.invalid){
+      alert("Invalid Form");
+    }
+    else{
     this.ipodetails = new Ac4();
-
     this.ipodetails.ipoid = this.Ipoid.value;
-
     this.ipodetails.companyname = this.Companyname.value;
-
     this.ipodetails.stockexchange = this.Stockexchange.value;
-
     this.ipodetails.pricepershare = this.Pricepershare.value;
-
     this.ipodetails.totalnoofshares = this.Totalnoofshares.value;
-
     this.ipodetails.opendatetime = this.Opendatetime.value;
-
-
-
     this.submitted = true;
-
-
-
     this.save();
-
-
-
+    }
   }
-
-
-
   save() {
-
-
-
     this.ipodetailsservice.saveIpoDetails(this.ipodetails)
       .subscribe(data => console.log(data), error => console.log(error));
-
     this.ipodetails = new Ac4();
     window.localStorage.removeItem("edit-ipoid");
     this.router.navigate(['ac4']);
   }
+
   get Ipoid() {
-
-
-
     return this.ipodetailssaveform.get('ipoid');
-
   }
-
   get Companyname() {
-
     return this.ipodetailssaveform.get('companyname');
   }
   get Stockexchange() {

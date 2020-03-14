@@ -42,6 +42,10 @@ export class AddmanageexchangeComponent implements OnInit {
 
 
   saveStockExchange(saveStockExchange) {
+    if(this.stockexchangesaveform.invalid){
+      alert("Invalid Form");
+    }
+    else{
     this.Mngexch = new Manageexchange();
     this.Mngexch.seid = this.Seid.value;
     this.Mngexch.stockexchange = this.Stockexchange.value
@@ -50,6 +54,7 @@ export class AddmanageexchangeComponent implements OnInit {
     this.Mngexch.contactaddress = this.Contactaddress.value;
     this.submitted = true;
     this.save();
+    }
   }
   save() {
     this.stockexchange.saveStockExchange(this.Mngexch)

@@ -41,82 +41,36 @@ export class AddsectorsComponent implements OnInit {
   });
 
   saveSectors(saveSectors){
-
-  this.sectors=new Ac5();
-
-  this.sectors.sectorid=this.Sectorid.value;
-
-  this.sectors.sectorname=this.Sectorname.value;
-
-  this.sectors.brief=this.Brief.value;
-
-  this.submitted = true;
-
-  this.save();
-
+    if(this.sectorssaveform.invalid){
+      alert("Invalid Form");
+    }
+    else{
+      this.sectors=new Ac5();
+    this.sectors.sectorid=this.Sectorid.value;
+    this.sectors.sectorname=this.Sectorname.value;
+    this.sectors.brief=this.Brief.value;
+    this.submitted = true;
+    this.save();
+    }
   }
   save() {
-
   this.ac5.saveSectors(this.sectors)
-
    .subscribe(data => console.log(data), error => console.log(error));
-
   this.sectors = new Ac5();
   window.localStorage.removeItem("edit-sectorid");
     this.router.navigate(['ac5']);
-
   }
-
   get Sectorid(){
-
-
-
   return this.sectorssaveform.get('sectorid');
-
-
-
   }
-
-
-
   get Sectorname(){
-
-
-
   return this.sectorssaveform.get('sectorname');
-
-
-
   }
-
-
-
   get Brief(){
-
-
-
   return this.sectorssaveform.get('brief');
-
-
-
   }
-
-
-
   saveSectorsForm(){
-
-
-
   this.submitted=false;
-
-
-
   this.sectorssaveform.reset();
-
-
-
   }
-
-
-
  }

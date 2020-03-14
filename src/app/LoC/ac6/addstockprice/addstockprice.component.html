@@ -204,7 +204,7 @@
 
  <form [formGroup]="stockpricesaveform" #saveStockPrice1 (ngSubmit)="saveStockPrice(saveStockPrice1)">
 
- <h2>Add Company</h2>
+ <h2>Add Stock Price</h2>
 
  <hr>
 
@@ -312,10 +312,10 @@
 
  <div class="form-group">
 
-  <button type="submit" class="btn btn-primary btn-lg">Add</button>
+  <button type="submit" class="btn btn-primary btn-lg" [disabled]=!stockpricesaveform.valid>Add</button>
 
 
-
+`
  </div>
 
 
@@ -330,7 +330,7 @@
 
  <h4>Stockprice Added SuccessFully!</h4>
 
- <button (click)="stockpricesaveform()"></button>
+ <button (click)="stockpricesaveform()" ></button>
 
  </div>
 

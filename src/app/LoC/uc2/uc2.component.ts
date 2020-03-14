@@ -73,7 +73,7 @@ export class Uc2Component implements OnInit {
     "fromdate":new FormControl([ Validators.required ]),
     "todate":new FormControl([ Validators.required ])
     })
-   this.companyserviceservice.getAllCompanies().subscribe(data => {
+    this.companyserviceservice.getAllCompanies().subscribe(data => {
     this.companyList = data;
     this.companyListAll=data;
     this.companyList=this.companyList.filter(comp=>comp.sector == 'NSE') ;
@@ -82,7 +82,7 @@ export class Uc2Component implements OnInit {
     this.stockpriceList = data;
     })
     this.sectorsserviceservice.getAllSectors().subscribe(data => {
-     this.sectorsList = data;
+    this.sectorsList = data;
      })
   }
   sectorChange()
@@ -93,14 +93,12 @@ export class Uc2Component implements OnInit {
   drawMultipleLineChart(formatteddata) {
     Highcharts.chart('container', {
       title: {
-       text: 'Solar Employment Growth by Sector, 2010-2019'
+       text: 'Company Comparision'
       },
-      subtitle: {
-       text: 'Source: thesolarfoundation.com'
-      },
+      
       yAxis: {
        title: {
-        text: 'Number of Employees'
+        text: 'Current Price'
        }
       },
       legend: {
@@ -115,6 +113,11 @@ export class Uc2Component implements OnInit {
         },
         pointStart: 2000
        }
+      },
+      xAxis: {
+        title:{
+        text: 'Years'
+        }
       },
       series: formatteddata,
       responsive: {

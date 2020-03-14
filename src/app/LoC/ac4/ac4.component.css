@@ -1,10 +1,11 @@
-.bg{
+body{
     background-image: url(src/app/LoC/images/typingphone.jpg);
- height:570px;
- background-position: center;
+ height:700px;
+ width: 1560px;
+ 
  background-repeat: no-repeat;
  background-size: cover;
   }
   *{
-      color:black;
+      color: white;
   }

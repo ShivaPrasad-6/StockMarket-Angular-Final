@@ -31,6 +31,7 @@ import { AddstockpriceComponent } from './LoC/ac6/addstockprice/addstockprice.co
 import { HighchartsChartModule } from 'highcharts-angular';
 
 import { HighchartsService } from 'src/app/HighchartsService.service';
+import { LogoutComponent } from './LoC/logout/logout.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { HighchartsService } from 'src/app/HighchartsService.service';
     AddsectorsComponent,
     Ac6Component,
     AddstockpriceComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

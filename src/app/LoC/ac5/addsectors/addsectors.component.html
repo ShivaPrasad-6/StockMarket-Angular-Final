@@ -216,7 +216,7 @@
 
  <form [formGroup]="sectorssaveform" #saveSectors1 (ngSubmit)="saveSectors(saveSectors1)">
 
- <h2>Add Company</h2>
+ <h2>Add Sectors</h2>
 
  <hr>
 
@@ -284,7 +284,7 @@
 
  <div class="form-group">
 
-  <button type="submit" class="btn btn-primary btn-lg">Add</button>
+  <button type="submit" class="btn btn-primary btn-lg" [disabled]=!sectorssaveform.valid>Add</button>
 
 
 
@@ -302,7 +302,7 @@
 
  <h4>Sector Added SuccessFully!</h4>
 
- <button (click)="sectorssaveform()"></button>
+ <button (click)="sectorssaveform()" ></button>
 
  </div>
 

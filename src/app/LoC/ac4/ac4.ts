@@ -11,4 +11,6 @@ export class Ac4 {
 
     opendatetime:number;
 
+     uploadfile:String;
+
 }

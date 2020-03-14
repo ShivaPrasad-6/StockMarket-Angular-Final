@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from '../navbar/navbar.service';
 
 @Component({
   selector: 'app-adminportal',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminportalComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private navbar:NavbarService){ }
+  isnavshow:boolean;
   ngOnInit() {
+    alert("adminportal");
+    this.isnavshow=this.navbar.IsLoggedin();
+    alert(this.isnavshow);
   }
 
+  
 }
