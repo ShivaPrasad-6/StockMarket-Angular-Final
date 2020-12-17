@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.14",
     "angular-datatables": "^8.0.0",
     "bootstrap": "^3.4.1",
-    "datatables.net": "^1.10.20",
+    "datatables.net": "^1.10.22",
     "datatables.net-dt": "^1.10.20",
     "highcharts": "^8.0.2",
     "highcharts-angular": "^2.4.0",
