@@ -1,0 +1,10 @@
+npm install jquery --save
+npm i datatables.net --save
+npm i datatables.net-dt --save
+npm i angular-datatables.net --save
+npm i angular-datatables --save
+npm i @types/jquery --save-dev
+npm i @types/datatables.net --save-dev
+npm i highcharts-angular --save
+npm audit fix
+npm i @angular-devkit/build-angular@0.803.24
